@@ -26,13 +26,13 @@ namespace FortuneTeller
             int userBirthMonth = int.Parse(Console.ReadLine());
 
             Console.Write("Please enter your favorite color from ROYGBIV \n(What is ROYGBIV? Type \"Help\": ");
-            string userColor = Console.ReadLine();
-            string userHelp = ("Help");
-            if (userColor == userHelp)
+            string userColors = Console.ReadLine();
+
+            string userColor = userColors.ToLower();
+            if (userColor == "help")
             {
                 Console.Write("\nRed \nOrange \nYellow \nGreen \nBlue \nIndigo \nViolet\n\nEnter Color: \a");
             }
-                string userColorHelp = Console.ReadLine(); //userColorHelp comes after user types Help for ROYGBIV display
 
             Console.Write("Please enter the number of siblings you have: ");
             int userSibling = int.Parse(Console.ReadLine());
@@ -98,31 +98,31 @@ namespace FortuneTeller
 
             //Conditional for favorite color
 
-            if (userColor == "Red")
+            if (userColor == "red")
             {
                 Console.Write(" and will drive a 1997 Toyota 4Runner.\n");
             }
-            else if (userColor == "Orange")
+            else if (userColor == "orange")
             {
                 Console.Write(" and will drive an exact replica of the Batmobile.\n");
             }
-            else if (userColor == "Yellow")
+            else if (userColor == "yellow")
             {
                 Console.Write(" and will drive a Maserati.\n");
             }
-            else if (userColor == "Green")
+            else if (userColor == "green")
             {
                 Console.Write(" and will drive a neon green Lincoln Town Car.\n");
             }
-            else if (userColor == "Blue")
+            else if (userColor == "blue")
             {
                 Console.Write(" and will forever live on a sailboat with no cabin.\n");
             }
-            else if (userColor == "Indigo")
+            else if (userColor == "indigo")
             {
                 Console.Write(" and will fly John Travolta's airplane to and from his house.\n");
             }
-            else if (userColor == "Violet")
+            else if (userColor == "violet")
             {
                 Console.Write(" and will hang around public parks and try and ride people's kites.\n");
             }
