@@ -32,6 +32,7 @@ namespace FortuneTeller
             if (userColor == "help")
             {
                 Console.Write("\nRed \nOrange \nYellow \nGreen \nBlue \nIndigo \nViolet\n\nEnter Color: \a");
+                Console.ReadLine();
             }
 
             Console.Write("Please enter the number of siblings you have: ");
