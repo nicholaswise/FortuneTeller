@@ -45,7 +45,8 @@ namespace FortuneTeller
 
             //Start conditionals for variables
 
-            //Conditional for user age
+            //Conditional for retiring years
+
             if (userAge % 2 != 0)
             {
                 Console.Write(" will retire in 20 years");
@@ -55,7 +56,8 @@ namespace FortuneTeller
                 Console.Write(" will retire in 30 years");
             }
 
-            //Conditional for user birth month
+            //Conditional for money in the bank
+
             if (userBirthMonth >= 1 && userBirthMonth <= 4)
             {
                 Console.Write(" with $20,000 in the bank,");
@@ -73,7 +75,7 @@ namespace FortuneTeller
                 Console.Write(" with $0 in the bank,");
             }
 
-            //Conditional for number of siblings
+            //Conditional for vacation home
 
             if (userSibling == 0)
             {
@@ -96,7 +98,7 @@ namespace FortuneTeller
                 Console.Write(" a vacation home in New Jersey,");
             }
 
-            //Conditional for favorite color
+            //Conditional for means of travel
 
             if (userColor == "red")
             {
