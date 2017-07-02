@@ -25,20 +25,23 @@ namespace FortuneTeller
             Console.Write("Please enter your birth month in numeric form (1-12): ");
             int userBirthMonth = int.Parse(Console.ReadLine());
 
-            Console.Write("Please enter your favorite color from ROYGBIV \n(What is ROYGBIV? Type \"Help\": ");
+            Console.Write("Please enter your favorite color from ROYGBIV \nWhat is ROYGBIV? Type \"Help\": ");
             string userColors = Console.ReadLine();
 
             string userColor = userColors.ToLower();
+
             if (userColor == "help")
-            {
+
                 Console.Write("\nRed \nOrange \nYellow \nGreen \nBlue \nIndigo \nViolet\n\nEnter Color: \a");
-                Console.ReadLine();
-            }
+                string userHelp = Console.ReadLine();
+
+                string userHelp1 = userHelp.ToLower();
 
             Console.Write("Please enter the number of siblings you have: ");
             int userSibling = int.Parse(Console.ReadLine());
 
             Console.Write("Thank you for your submission! \nPress enter to see your future!\n\n");
+
             Console.ReadKey();
 
             Console.Write(firstName+ " ");
@@ -101,31 +104,31 @@ namespace FortuneTeller
 
             //Conditional for means of travel
 
-            if (userColor == "red")
+            if (userColor == "red" || userHelp1 == "red")
             {
                 Console.Write(" and will drive a 1997 Toyota 4Runner.\n");
             }
-            else if (userColor == "orange")
+            else if (userColor == "orange" || userHelp1 == "orange")
             {
                 Console.Write(" and will drive an exact replica of the Batmobile.\n");
             }
-            else if (userColor == "yellow")
+            else if (userColor == "yellow" || userHelp1 == "yellow")
             {
                 Console.Write(" and will drive a Maserati.\n");
             }
-            else if (userColor == "green")
+            else if (userColor == "green" || userHelp1 == "green")
             {
-                Console.Write(" and will drive a neon green Lincoln Town Car.\n");
+                Console.Write(" and will drive a blacked out Lincoln Town Car.\n");
             }
-            else if (userColor == "blue")
+            else if (userColor == "blue" || userHelp1 == "blue")
             {
-                Console.Write(" and will forever live on a sailboat with no cabin.\n");
+                Console.Write(" and will forever sail a boat with no cabin.\n");
             }
-            else if (userColor == "indigo")
+            else if (userColor == "indigo" || userHelp1 == "indigo")
             {
-                Console.Write(" and will fly John Travolta's airplane to and from his house.\n");
+                Console.Write(" and will fly an airplane to every occasion.\n");
             }
-            else if (userColor == "violet")
+            else if (userColor == "violet" || userHelp1 == "violet")
             {
                 Console.Write(" and will hang around public parks and try and ride people's kites.\n");
             }
@@ -133,8 +136,6 @@ namespace FortuneTeller
             {
                 Console.Write(" and will have no means of travel.\n");
             }
-
-
 
             //[First Name] [Last Name] will retire in [# of Years] with [Amount of Money] in the bank, a vacation home in [Location] and a [Mode of Transportation].
 
