@@ -15,64 +15,106 @@ namespace FortuneTeller
 
             Console.Write("Please enter your first name: ");
             string firstName = Console.ReadLine();
+            string firstNameAny = firstName.ToLower();
+            if (firstNameAny == "quit")
+            {
+                Console.Write("Nobody likes a quitter!\n");
+                Environment.Exit(0);
+            }
 
             Console.Write("Please enter your last name: ");
             string lastName = Console.ReadLine();
+            string lastNameAny = lastName.ToLower();
+            if (lastNameAny == "quit")
+            {
+                Console.Write("Nobody likes a quitter!\n");
+                Environment.Exit(0);
+            }
 
             Console.Write("Please enter your age: ");
-            int userAge = int.Parse(Console.ReadLine());
+            string userAge = Console.ReadLine();
+            string userAgeString = userAge.ToLower();
+            if (userAgeString == "quit")
+            {
+                Console.Write("Nobody likes a quitter!\n");
+                Environment.Exit(0);
+            }
+            int userAgeInt = Convert.ToInt32(userAge);
 
-            Console.Write("Please enter your birth month in numeric form (1-12): ");
-            int userBirthMonth = int.Parse(Console.ReadLine());
+            Console.Write("Please enter your birth month(1-12): ");
+            string userBirthMonth = Console.ReadLine();
+            string userBirthMonth1 = userBirthMonth.ToLower();
+            if (userBirthMonth1 == "quit")
+            {
+                Console.Write("Nobody likes a quitter!\n");
+                Environment.Exit(0);
+            }
+            int userBirthMonthInt = Convert.ToInt32(userBirthMonth1);
 
             Console.Write("Please enter your favorite color from ROYGBIV \nWhat is ROYGBIV? Type \"Help\": ");
             string userColors = Console.ReadLine();
-
             string userColor = userColors.ToLower();
-
+            if (userColor == "quit")
+            {
+                Console.Write("Nobody likes a quitter!\n");
+                Environment.Exit(0);
+            }
             if (userColor == "help")
-
+            
                 Console.Write("\nRed \nOrange \nYellow \nGreen \nBlue \nIndigo \nViolet\n\nEnter Color: \a");
-                string userHelp = Console.ReadLine();
 
+                string userHelp = (Console.ReadLine());
                 string userHelp1 = userHelp.ToLower();
 
+                if (userHelp1 == "quit")
+                {
+                    Console.Write("Nobody likes a quitter!\n");
+                    Environment.Exit(0);
+                }
+       
+
             Console.Write("Please enter the number of siblings you have: ");
-            int userSibling = int.Parse(Console.ReadLine());
+            string userSibling = Console.ReadLine();
+            string userSiblings = userSibling.ToLower();
+            if (userSiblings == "quit")
+            {
+                Console.Write("Nobody likes a quitter!\n");
+                Environment.Exit(0);
+            }
+            int userSiblingInt = Convert.ToInt32(userSiblings);
 
             Console.Write("Thank you for your submission! \nPress enter to see your future!\n\n");
-
             Console.ReadKey();
 
-            Console.Write(firstName+ " ");
+            Console.Write(firstName + " ");
             Console.Write(lastName);
 
             //Start conditionals for variables
 
             //Conditional for retiring years
 
-            if (userAge % 2 != 0)
+            if (userAgeInt % 2 != 0)
             {
                 Console.Write(" will retire in 20 years");
             }
-            else if (userAge % 2 == 0)
+            else if (userAgeInt % 2 == 0)
             {
                 Console.Write(" will retire in 30 years");
             }
 
             //Conditional for money in the bank
 
-            if (userBirthMonth >= 1 && userBirthMonth <= 4)
-            {
-                Console.Write(" with $20,000 in the bank,");
-            }
-            else if (userBirthMonth >= 5 && userBirthMonth <= 8)
+            if (userBirthMonthInt >= 1 && userBirthMonthInt <= 4)
             {
                 Console.Write(" with $50,000 in the bank,");
             }
-            else if (userBirthMonth >= 9 && userBirthMonth <= 12)
+            else if (userBirthMonthInt >= 5 && userBirthMonthInt <= 8)
             {
-                Console.Write(" with $75,000 in the bank,");
+                Console.Write(" with $100,000 in the bank,");
+            }
+            else if (userBirthMonthInt >= 9 && userBirthMonthInt <= 12)
+            {
+                Console.Write(" with $500,000 in the bank,");
             }
             else
             {
@@ -81,19 +123,19 @@ namespace FortuneTeller
 
             //Conditional for vacation home
 
-            if (userSibling == 0)
+            if (userSiblingInt == 0)
             {
                 Console.Write(" a vacation home on a mountain in Colorado,");
             }
-            else if (userSibling == 1)
+            else if (userSiblingInt == 1)
             {
                 Console.Write(" a vacation home in the Lofoten Islands off the coast of Norway,");
             }
-            else if (userSibling == 2)
+            else if (userSiblingInt == 2)
             {
                 Console.Write(" a vacation home in New York City,");
             }
-            else if (userSibling == 3)
+            else if (userSiblingInt == 3)
             {
                 Console.Write(" a vactaion home in Iceland,");
             }
@@ -122,7 +164,7 @@ namespace FortuneTeller
             }
             else if (userColor == "blue" || userHelp1 == "blue")
             {
-                Console.Write(" and will forever sail a boat with no cabin.\n");
+                Console.Write(" and will drive the Mystery Machine.\n");
             }
             else if (userColor == "indigo" || userHelp1 == "indigo")
             {
